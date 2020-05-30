@@ -15,6 +15,7 @@ namespace CodeCounter
         public ProcessProject(string projectFileName)
         {
             ProjectFile = new FileInfo(projectFileName);
+            FileList = new List<string>();
             GetListOfCodeFilesFromProjectFile();
         }
         #endregion
