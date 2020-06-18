@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 namespace CodeCounter
 {
@@ -96,7 +92,8 @@ namespace CodeCounter
                 line.StartsWith("#region Component Designer generated code") ||
                 line.StartsWith("#Region \" Component Designer generated code \"") ||
                 line.StartsWith("#region Web Form Designer generated code") ||
-                line.StartsWith("#Region \" Web Form Designer Generated Code \"")
+                line.StartsWith("#Region \" Web Form Designer Generated Code \"") ||
+                line.Contains("#region Windows Form Designer generated code")
                 )
                 inCodeGeneratedRegion = true;
             if (line.StartsWith("/*"))
